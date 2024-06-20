@@ -1,0 +1,40 @@
+.about-service {
+    width: 100%;
+    background-color: #1d1c1c;
+    padding: 1em;
+    transition: background-color 0.5s ease-in-out;
+    border-radius: 10px;
+    margin-bottom: 2.3em;
+    border: 2px solid transparent;
+}
+
+.about-service h2 {
+    padding-bottom: 0.3em;
+    border-bottom: 2px solid #abaaaa;
+    transition: border-color 0.5s ease-in-out;
+}
+
+.about-service nav>ul>li {
+    list-style-type: none;
+    padding-top: 1em;
+    transition: transform 0.3s ease-in-out;
+}
+
+.about-service nav>ul>li:hover {
+    transform: translateX(13px);
+}
+
+.about-service nav>ul>li::marker {
+    font-size: 1.5em;
+}
+
+.about-service nav>ul>li>a {
+    text-decoration: none;
+    color: #FF0000;
+    font-size: 20px;
+    transition: color 0.5s ease-in-out;
+}
+
+.about-service nav>ul>li:hover a {
+    color: #c70909;
+}

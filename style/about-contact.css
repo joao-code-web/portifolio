@@ -1,0 +1,126 @@
+.about-contact {
+    width: 100%;
+    background-color: #1d1c1c;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 1em;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.about-contact h2 {
+    font-size: 2em;
+    color: #FF5733;
+    /* Laranja neon */
+    margin-bottom: 0.5em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    transition: color 0.3s ease-in-out;
+}
+
+
+.about-contact>form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about-contact .input-two {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1em;
+    width: 100%;
+}
+
+.about-contact .input-two>input {
+    flex: 1;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    outline: none;
+    transition: 0.3s all;
+    padding: 1em;
+    color: white;
+    font-size: 16px;
+    margin-bottom: 1em;
+}
+
+.about-contact input,
+textarea {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid #FF5733;
+    border-radius: 5px;
+    padding: 1em;
+    outline: none;
+    transition: 0.3s all;
+    color: white;
+    font-size: 16px;
+    margin-bottom: 1em;
+    width: 95%;
+}
+
+.about-contact input::placeholder,
+.about-contact textarea::placeholder {
+    color: #ffffff80;
+}
+
+.about-contact input:focus,
+.about-contact textarea:focus,
+.about-contact .input-two>input:focus {
+    border-color: #FF5733;
+    background-color: #ffffff33;
+    color: white;
+    box-shadow: 0 0 8px #FF5733, 0 0 16px #FF5733;
+}
+
+.about-contact button {
+    padding: 1em 2em;
+    margin-top: 1em;
+    width: 200px;
+    background-color: #FF5733;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: 0.3s all;
+    position: relative;
+}
+
+.about-contact button::before {
+    content: '';
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    right: -4px;
+    bottom: -4px;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    box-shadow: 0 0 8px #FF5733, 0 0 16px #FF5733;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.about-contact button:hover::before {
+    opacity: 1;
+}
+
+.about-contact button:hover {
+    background-color: #FF7043;
+    /* Laranja neon um pouco mais claro */
+    box-shadow: 0 4px 8px rgba(255, 87, 51, 0.2);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

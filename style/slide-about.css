@@ -1,0 +1,117 @@
+/* Estilização dos slides */
+.slide-about {
+    width: 100%;
+    padding: 1em;
+    background-color: #1d1c1c;
+    border-radius: 10px;
+    margin-bottom: 2em;
+    color: white;
+}
+
+.slide-about>h2 {
+    font-size: 30px;
+    padding: 1em 1em;
+    border-bottom: 1px solid black;
+}
+
+.splide {
+    width: 100%;
+    position: relative;
+}
+
+.splide>.splide__slide {
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.splide__slide.splide__slide--active {
+    opacity: 1;
+}
+
+.splide>.splide__slide>figure {
+    display: flex;
+    align-items: center;
+}
+
+.profile-pic {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.people {
+    display: flex;
+    align-items: center;
+}
+
+.comment {
+    font-size: 20px;
+    padding: 1em;
+    line-height: 1.5;
+}
+
+.splide>.splide__arrows {
+    position: absolute;
+    top: -60px;
+    right: 90px;
+    transform: rotate(180deg);
+}
+
+.splide>.splide__arrows>button {
+    transform: rotate(180deg);
+    background-color: #0000001a;
+    color: white;
+    border-radius: 7px;
+    width: 60px;
+    height: 60px;
+    border: none;
+    font-size: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.splide>.splide__arrows>button>svg  {
+fill: white;
+}
+
+.splide>.splide__arrows>button:hover svg {
+    fill: red;
+    filter: drop-shadow(0 0 10px #ff0000) drop-shadow(0 0 20px #ff0000) drop-shadow(0 0 30px #ff0000);
+}
+
+@keyframes fade {
+    from {
+        opacity: 0.4;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes neonBorder {
+    from {
+        box-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 30px #ff0000;
+    }
+    to {
+        box-shadow: 0 0 20px #ff0000, 0 0 30px #ff0000, 0 0 40px #ff0000;
+    }
+}
+
+
+@media screen and (max-width: 940px) {
+    .slide-about> h2 {
+        padding-bottom: 4em;
+    }
+
+    .splide>.splide__arrows {
+        right: 50%;
+    }
+}
